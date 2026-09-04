@@ -95,7 +95,7 @@ The building footprints layer is supplied in EPSG:4326 and requires reprojection
 | ID | File | Description | Status |
 |---|---|---|---|
 | M1 | Sentinel-2 metadata | Acquisition metadata for the composite | Included |
-| P1 | Soil Type, NATMAP | National soil classification | Pending |
+| P1 | Soil Type, NATMAP | National soil classification | Included |
 
 ## Data preparation
 
