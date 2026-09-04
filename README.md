@@ -101,6 +101,91 @@ The building footprints layer is supplied in EPSG:4326 and requires reprojection
 
 All vector and raster layers are resampled to a common 10 m grid in EPSG:32630 and fused into a 35-band modality stack. Labels are assigned at 12,847 pixel locations, with the High Risk class making up 0.44% of labels.
 
+## Focused sub-study: Chelmer Village and Beaulieu Park
+
+A detailed sub-study covers Chelmer Village and Beaulieu Park in North Chelmsford (CM1 6EA), examining surface water flood risk and SuDS opportunity at development scale.
+
+| Property | Value |
+|---|---|
+| Study area | 430 ha, CM1 6EA |
+| Buildings | 1,997 |
+| Road network | 47.9 km |
+| Spatial layers | 19 |
+| Coordinate reference system | EPSG:27700 (British National Grid) |
+
+### Sub-study layer inventory
+
+All 19 layers are standardised to EPSG:27700 and verified for geometry validity, spatial alignment, and attribute completeness.
+
+| Dataset | Type | Source | Detail |
+|---|---|---|---|
+| Study Boundary | Polygon | CM1 6EA boundary | 430 ha polygon |
+| Buildings | Polygon | Microsoft Global ML | 1,997 footprints, reprojected from WGS84 |
+| Baseline Flood 0.2–1.2 m | Polygon | Environment Agency RoFSW | 5 layers, 29–32 ha core |
+| CC01 Flood 0.2–1.2 m | Polygon | Environment Agency CC01 | 5 layers, 39–41 ha |
+| DTM 1 m LiDAR | Raster | OS/EA LiDAR | 1 m resolution, 23.1–61.5 m AOD |
+| WorldCover 2022 | Raster | ESA WorldCover | 7.6 m resolution, 7 land cover classes |
+| Geology | Polygon | BGS HydrogeologyUK v5 | Single polygon, Thames Group clay |
+| Soil Permeability | Polygon | BGS HydrogeologyUK v5 | Class 3 impermeable, entire site |
+| Rainfall | Polygon | Chelmsford Station 2016–2025 | 580 mm/yr, monthly values |
+| Roads | Line | OS OpenRoads | 595 segments, 47.9 km total |
+| Tree Canopy Cover | Polygon | Forest Research 2022 | 2 wards, 8.9% weighted average |
+
+### Completed experiments
+
+Four experiments have been run on the sub-study data, comparing the Environment Agency baseline against the CC01 climate change scenario across five depth thresholds (0.2, 0.3, 0.6, 0.9, 1.2 m).
+
+**Experiment 1 — Building flood exposure.** Buildings joined against all 10 flood layers and scored by risk band. At 0.2 m, buildings at risk rise from 344 (17.2%) under baseline to 426 (21.3%) under CC01, an increase of 82. High-risk buildings rise from 40 to 73.
+
+**Experiment 2 — Road network disruption.** Flooded road lengths measured by geometric overlay. At 0.2 m, road length at risk rises from 3.87 km (8.1%) to 5.11 km (10.7%). High-risk road length rises from 0.28 km to 0.45 km, and 0.86 km of A-roads fall within the CC01 zone.
+
+**Experiment 3 — SuDS constraint map.** Slope from the DTM, land cover from WorldCover, and flood zone proximity combined into a pixel-level opportunity score. Geology is entirely Thames Group clay, so infiltration SuDS is not viable anywhere on site.
+
+| Classification | Area | Share of study area | Overlap with CC01 flood zone |
+|---|---|---|---|
+| High opportunity | 123.4 ha | 28.7% | 20.9 ha |
+| Medium opportunity | 223.4 ha | 51.9% | 17.6 ha |
+| Low opportunity | 56.7 ha | 13.2% | 2.6 ha |
+| Constrained | 26.9 ha | 6.3% | 0.0 ha |
+| Total viable | 346.8 ha | 80.6% | 38.5 ha |
+
+**Experiment 4 — Climate change delta map.** Baseline flood zones spatially subtracted from CC01 zones at each depth to isolate newly created risk.
+
+| Depth | Baseline | CC01 | New area | New buildings | New roads |
+|---|---|---|---|---|---|
+| 0.2 m | 32.1 ha | 41.1 ha | +9.0 ha | +277 | +1.23 km |
+| 0.3 m | 30.4 ha | 39.8 ha | +9.4 ha | +256 | +1.26 km |
+| 0.6 m | 29.1 ha | 39.3 ha | +10.2 ha | +242 | +1.26 km |
+| 0.9 m | 29.0 ha | 39.2 ha | +10.2 ha | +241 | +1.26 km |
+| 1.2 m | 29.0 ha | 39.2 ha | +10.2 ha | +242 | +1.26 km |
+
+The new zone stabilises at 10.2 ha from 0.6 m onwards, representing the irreducible climate change footprint and the primary SuDS design target.
+
+### Data quality
+
+All 19 layers are confirmed in EPSG:27700 with no CRS mismatches, no null, invalid, or empty geometries, and no null values in critical attribute fields. Flood layers are internally consistent, with extent decreasing as depth increases and CC01 exceeding baseline at every threshold. The DTM contains no elevation outliers.
+
+Minor non-blocking issues are recorded as follows. Among buildings, 41 footprints are under 10 m² and are likely garages or outbuildings, 23 have height recorded as 0 m from unresolved ML detection, and 51 sit just outside the study boundary as edge overspill from the source dataset. Among roads, 2 segments are shorter than 5 m and represent junction topology slivers, while 120 segments (20.2%) are unnamed, which is standard for OS OpenRoads service roads and access tracks. For rasters, WorldCover at 7.6 m resolution against the 1 m DTM is acceptable at catchment scale but limits sub-parcel precision, and tree canopy data covers whole wards with no within-ward variation.
+
+### Known gaps
+
+Four datasets from the original plan were not collected. None blocked the completed experiments, and each has a usable substitute.
+
+| Missing dataset | Priority | Substitute | Impact |
+|---|---|---|---|
+| OS Open Rivers | Medium | DTM flow accumulation derivation | Needed for precise SuDS placement in the drainage catchment |
+| Fluvial Flood Risk (RoFR) | Medium | DTM elevation proxy below 35 m AOD | Needed for combined river and surface water risk analysis |
+| LCM 2022 (UKCEH) | Low | WorldCover 2022 | Fewer land cover classes and lower resolution |
+| Sentinel-2 NDWI | Low | Flood polygons and DTM low points | Waterlogged areas outside mapped flood polygons not captured |
+
+All substitutes are defensible at catchment scale, and any derived layers are labelled as proxies in outputs.
+
+### Fitness for further work
+
+The sub-study dataset supports flood exposure analysis at any depth or risk band threshold, building and road risk classification, terrain analysis including slope, aspect and flow direction, land cover characterisation and impervious surface estimation, SuDS constraint and opportunity mapping, and baseline against CC01 comparison.
+
+Three further tasks require additional derivation first. Drainage routing and flow accumulation need a river network derived from the DTM, combined fluvial and surface water risk needs a terrain proxy from DTM low points, and sub-parcel SuDS site design is limited by WorldCover resolution at individual site level.
+
 ## Citation
 
 If you use this dataset, please cite the following related AI4MultiGIS publications:
