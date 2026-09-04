@@ -1,8 +1,37 @@
-# Chelmsford SuDS Dataset (AI4MultiGIS Pilot 1)
+# Chelmsford SuDS Dataset
 
 Geospatial dataset supporting flood risk and Sustainable Drainage System (SuDS) analysis for Chelmsford, Essex, UK. Produced as part of the AI4MultiGIS project (UKRI CHIST-ERA, grant EP/Z003490/1), Anglia Ruskin University.
 
-## Overview
+Project website: [https://www.ai4multigis.eu](https://www.ai4multigis.eu)
+
+## About AI4MultiGIS
+
+AI4MultiGIS, standing for AI Integrated Framework for Intelligent Geospatial Handling and Robust Operation in MultiGIS Applications, is a project that aims to deliver an integrated framework optimizing the processing chain of MultiGIS data, so that GIS-enabled applications and services can operate robustly. The framework spans the full MultiGIS process, from data collection through remote sensing, GPS surveys and environmental sensors, to data integration via cloud storage and spatial databases, multidimensional spatial and spectral processing with AI-based pattern recognition, visualization through interactive maps and simulations, and decision-making support for policy and strategic planning.
+
+## Objectives of AI4MultiGIS
+
+**Automated data collection and preprocessing**
+- Develop AI-driven approaches to integrate real-time IoT data, remote sensing insights, and diverse datasets.
+- Address challenges in spatial data accuracy, synchronization, and inconsistencies.
+- Reduce data integration time by at least 30% and uncertainty levels by 20%.
+
+**Real-time spatiotemporal data processing**
+- Implement a federated reinforcement learning framework for processing vast multi-dimensional geospatial data.
+- Optimize computing efficiency for faster decision-making and response time.
+
+**Geostatistical AI analysis and decision support**
+- Develop a cloud-integrated AI platform for multi-modal GIS data interpretation.
+- Enhance predictive analytics capabilities using machine learning models.
+
+**Responsible AI governance and policy development**
+- Establish policies and best practices to ensure the fairness, transparency, and compliance of AI-enabled MultiGIS applications with the EU AI Act and other global regulations.
+- Improve fairness in decision-making by at least 50%.
+
+## SuDS pilot
+
+This dataset supports the Chelmsford Sustainable Drainage System (SuDS) pilot, which applies the AI4MultiGIS framework to flood risk and drainage analysis for Chelmsford, Essex. It fuses vector and raster geospatial layers covering hydrology, terrain, land use, satellite imagery and building footprints into a common resampled stack, used to model and label flood risk across the study area.
+
+## Dataset overview
 
 | Property | Value |
 |---|---|
@@ -74,8 +103,17 @@ All vector and raster layers are resampled to a common 10 m grid in EPSG:32630 a
 
 ## Citation
 
+If you use this dataset, please cite the following related AI4MultiGIS publications:
+
+- Hassan, M., Sardar, B., Islam, S., Imani, M., & Hakiri, A. (2026). From principles to practice: Engineering responsible AI for geospatial intelligence. *SN Computer Science*, 7(6), 692. [https://doi.org/10.1007/s42979-026-05258-0](https://link.springer.com/article/10.1007/s42979-026-05258-0)
+
+- Wu, Z., & Islam, S. (2026). SAM2-based few-shot segmentation for remote sensing imagery with explainable AI. In *Management of Digital EcoSystems* (MEDES 2025), Communications in Computer and Information Science, vol. 3104, pp. 104–115. Springer, Cham. [https://doi.org/10.1007/978-3-032-36554-5_8](https://link.springer.com/chapter/10.1007/978-3-032-36554-5_8)
+
+- Hochbauer, H., Basheer, N., Frincu, M., & Islam, S. (2026). Beyond accuracy: Responsible AI and synthetic data in GIS. In *Management of Digital EcoSystems* (MEDES 2025), Communications in Computer and Information Science, vol. 3104, pp. 116–130. Springer, Cham. [https://doi.org/10.1007/978-3-032-36554-5_9](https://link.springer.com/chapter/10.1007/978-3-032-36554-5_9)
+
 ## License
 
 ## Contact
 
-Hassan, Research Assistant, AI4MultiGIS Project, Anglia Ruskin University.
+Muhammad Hassan, Research Assistant, AI4MultiGIS Project, Anglia Ruskin University.
+Muhammad.hassan@aru.ac.uk
