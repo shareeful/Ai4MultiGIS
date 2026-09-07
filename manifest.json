@@ -1,0 +1,337 @@
+{
+  "side_m": 1600.0,
+  "bounds": [
+    572132.9599333778,
+    209370.5819655958,
+    573732.9599333778,
+    210970.5819655958
+  ],
+  "centre": [
+    572932.9599333778,
+    210170.5819655958
+  ],
+  "full_extent": [
+    571585.6711177675,
+    208722.41160597082,
+    574280.2487489881,
+    211618.7523252208
+  ],
+  "crs": "EPSG:27700",
+  "vectors": [
+    {
+      "layer": "study_boundary",
+      "geom_type": [
+        "Polygon"
+      ],
+      "fields": [
+        "id"
+      ],
+      "features_in": 1,
+      "features_out": 1,
+      "renamed_fid": false
+    },
+    {
+      "layer": "buildings",
+      "geom_type": [
+        "MultiPolygon",
+        "Polygon"
+      ],
+      "fields": [
+        "centroid_l",
+        "centroid_1",
+        "height_m",
+        "confidence",
+        "num_vertic"
+      ],
+      "features_in": 1997,
+      "features_out": 1367,
+      "renamed_fid": false
+    },
+    {
+      "layer": "rofsw_0_2m",
+      "geom_type": [
+        "MultiPolygon"
+      ],
+      "fields": [
+        "src_fid",
+        "risk_band",
+        "shape_leng",
+        "shape_area"
+      ],
+      "features_in": 49,
+      "features_out": 16,
+      "renamed_fid": true
+    },
+    {
+      "layer": "rofsw_0_3m",
+      "geom_type": [
+        "MultiPolygon"
+      ],
+      "fields": [
+        "src_fid",
+        "risk_band",
+        "shape_leng",
+        "shape_area"
+      ],
+      "features_in": 49,
+      "features_out": 16,
+      "renamed_fid": true
+    },
+    {
+      "layer": "rofsw_0_6m",
+      "geom_type": [
+        "MultiPolygon",
+        "Polygon"
+      ],
+      "fields": [
+        "src_fid",
+        "risk_band",
+        "shape_leng",
+        "shape_area"
+      ],
+      "features_in": 44,
+      "features_out": 16,
+      "renamed_fid": true
+    },
+    {
+      "layer": "rofsw_0_9m",
+      "geom_type": [
+        "MultiPolygon",
+        "Polygon"
+      ],
+      "fields": [
+        "src_fid",
+        "risk_band",
+        "shape_leng",
+        "shape_area"
+      ],
+      "features_in": 35,
+      "features_out": 15,
+      "renamed_fid": true
+    },
+    {
+      "layer": "rofsw_1_2m",
+      "geom_type": [
+        "MultiPolygon",
+        "Polygon"
+      ],
+      "fields": [
+        "src_fid",
+        "risk_band",
+        "shape_leng",
+        "shape_area"
+      ],
+      "features_in": 31,
+      "features_out": 12,
+      "renamed_fid": true
+    },
+    {
+      "layer": "crofsw_cc01_0_2m",
+      "geom_type": [
+        "MultiPolygon"
+      ],
+      "fields": [
+        "risk_band",
+        "shape_leng",
+        "shape_area"
+      ],
+      "features_in": 50,
+      "features_out": 16,
+      "renamed_fid": false
+    },
+    {
+      "layer": "crofsw_cc01_0_3m",
+      "geom_type": [
+        "MultiPolygon"
+      ],
+      "fields": [
+        "risk_band",
+        "shape_leng",
+        "shape_area"
+      ],
+      "features_in": 49,
+      "features_out": 16,
+      "renamed_fid": false
+    },
+    {
+      "layer": "crofsw_cc01_0_6m",
+      "geom_type": [
+        "MultiPolygon"
+      ],
+      "fields": [
+        "risk_band",
+        "shape_leng",
+        "shape_area"
+      ],
+      "features_in": 47,
+      "features_out": 16,
+      "renamed_fid": false
+    },
+    {
+      "layer": "crofsw_cc01_0_9m",
+      "geom_type": [
+        "MultiPolygon",
+        "Polygon"
+      ],
+      "fields": [
+        "risk_band",
+        "shape_leng",
+        "shape_area"
+      ],
+      "features_in": 39,
+      "features_out": 16,
+      "renamed_fid": false
+    },
+    {
+      "layer": "crofsw_cc01_1_2m",
+      "geom_type": [
+        "MultiPolygon",
+        "Polygon"
+      ],
+      "fields": [
+        "risk_band",
+        "shape_leng",
+        "shape_area"
+      ],
+      "features_in": 35,
+      "features_out": 13,
+      "renamed_fid": false
+    },
+    {
+      "layer": "geology",
+      "geom_type": [
+        "Polygon"
+      ],
+      "fields": [
+        "OBJECTID",
+        "ROCK_UNIT",
+        "CLASS",
+        "CHARACTER",
+        "FLOW_MECHA",
+        "SUMMARY",
+        "VERSION"
+      ],
+      "features_in": 1,
+      "features_out": 1,
+      "renamed_fid": false
+    },
+    {
+      "layer": "soil_permeability",
+      "geom_type": [
+        "Polygon"
+      ],
+      "fields": [
+        "OBJECTID",
+        "ROCK_UNIT",
+        "CLASS",
+        "CHARACTER",
+        "FLOW_MECHA",
+        "SUMMARY",
+        "VERSION"
+      ],
+      "features_in": 1,
+      "features_out": 1,
+      "renamed_fid": false
+    },
+    {
+      "layer": "roads",
+      "geom_type": [
+        "LineString",
+        "MultiLineString"
+      ],
+      "fields": [
+        "src_fid",
+        "fictitious",
+        "identifier",
+        "class",
+        "roadNumber",
+        "name1",
+        "name1_lang",
+        "name2",
+        "name2_lang",
+        "formOfWay",
+        "length",
+        "primary",
+        "trunkRoad",
+        "loop",
+        "startNode",
+        "endNode",
+        "structure",
+        "nameTOID",
+        "numberTOID",
+        "function",
+        "layer",
+        "path"
+      ],
+      "features_in": 595,
+      "features_out": 387,
+      "renamed_fid": true
+    },
+    {
+      "layer": "rainfall",
+      "geom_type": [
+        "Polygon"
+      ],
+      "fields": [
+        "GRID_ID",
+        "prJan",
+        "prFeb",
+        "prMar",
+        "prApr",
+        "prMay",
+        "prJun",
+        "prJul",
+        "prAug",
+        "prSep",
+        "prOct",
+        "prNov",
+        "prDec"
+      ],
+      "features_in": 1,
+      "features_out": 1,
+      "renamed_fid": false
+    },
+    {
+      "layer": "tree_canopy",
+      "geom_type": [
+        "Polygon"
+      ],
+      "fields": [
+        "country",
+        "wardcode",
+        "wardname",
+        "designated",
+        "status",
+        "survyear",
+        "percancov",
+        "standerr",
+        "numpts",
+        "warea"
+      ],
+      "features_in": 2,
+      "features_out": 2,
+      "renamed_fid": false
+    }
+  ],
+  "raster": {
+    "width": 1600,
+    "height": 1600,
+    "nodata_cells": 0,
+    "classes": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  "gpkg_bytes": 6197248,
+  "tif_bytes": 249878,
+  "total_bytes": 6447126,
+  "attempts": [
+    {
+      "side_m": 1600.0,
+      "total_bytes": 6447126
+    }
+  ]
+}
