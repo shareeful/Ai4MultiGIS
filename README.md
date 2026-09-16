@@ -1,6 +1,6 @@
-# Chelmsford SuDS Dataset
+# Sustainable Drainage System (SuDS) Planning Dataset
 
-Geospatial dataset supporting flood risk and Sustainable Drainage System (SuDS) analysis for Chelmsford, Essex, UK. Produced as part of the AI4MultiGIS project (UKRI CHIST-ERA, grant EP/Z003490/1), Anglia Ruskin University.
+This repository provides a geospatial dataset to support Sustainable Drainage Systems (SuDS) planning and decision-making during the feasibility and concept design stages, using Beaulieu, Chelmsford (Essex, UK) as a case study. The dataset is primarily intended to assist in the identification of SuDS interventions for flood risk reduction, while supporting evidence-based spatial planning and early-stage design decisions. Produced as part of the AI4MultiGIS project (UKRI CHIST-ERA, grant EP/Z003490/1), Anglia Ruskin University.
 
 Project website: <https://www.ai4multigis.eu>
 
@@ -35,7 +35,8 @@ AI4MultiGIS, standing for AI Integrated Framework for Intelligent Geospatial Han
 
 ## SuDS pilot
 
-This dataset supports the Chelmsford Sustainable Drainage System (SuDS) pilot, which applies the AI4MultiGIS framework to flood risk and drainage analysis for Chelmsford, Essex. It fuses vector and raster geospatial layers covering hydrology, terrain, land use, satellite imagery and building footprints into a common resampled stack, used to model and label flood risk across the study area.
+Geospatial dataset derived from the existing SuDS-enabled development of Beaulieu, Chelmsford, Essex, UK, used as a pilot case study within the AI4MultiGIS framework. The dataset integrates hydrological, terrain, land use, satellite imagery, and building footprint data to enable AI-based learning of SuDS planning and design patterns, with a particular focus on flood risk reduction. The learned insights can be applied to support SuDS planning and decision-making at the feasibility and concept design stages in other locations.
+
 
 ## Dataset overview
 
