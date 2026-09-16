@@ -462,5 +462,11 @@ Hochbauer, H., Basheer, N., Frincu, M., & Islam, S. (2026). Beyond accuracy: Res
 License
 Source layers are redistributed under the terms of their original providers, including the Environment Agency, Ordnance Survey, British Geological Survey, UKCEH, ESA and Microsoft. Licence terms for each source apply to the derived and clipped layers in this repository and should be checked before reuse.
 
+Acknowledgement
+This work was supported by UK Research and Innovation
+(UKRI) through the CHIST-ERA Project, AI4MultiGIS - AI integrated framework for
+intelligent geospatial handling and robust operation in MultiGIS applications, funded
+under grant number EP/Z003490/1
+
 Contact
 Muhammad Hassan, Research Assistant, AI4MultiGIS Project, Anglia Ruskin University. Muhammad.hassan@aru.ac.uk
