@@ -300,6 +300,8 @@ If you use this dataset, please cite the following related AI4MultiGIS publicati
 ## License
 
 Source layers are redistributed under the terms of their original providers, including the Environment Agency, Ordnance Survey, British Geological Survey, UKCEH, ESA and Microsoft. Licence terms for each source apply to the derived and clipped layers in this repository and should be checked before reuse. All datasets used in the analysis were sourced from publicly accessible government or open data portals. These datasets are available for download without the need to purchase a commercial license. Their use within this research is subject to the respective providers open data licenses, terms of use and attribution requirements.
+| Data | Source |
+|---------------|
 
 ## Contact
 
