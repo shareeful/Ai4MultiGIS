@@ -306,7 +306,7 @@ Source layers are redistributed under the terms of their original providers, inc
 | Roads | https://www.data.gov.uk/dataset/65bf62c8-eae0-4475-9c16-a2e81afcbdb0/os-open-roads1 |
 | Risks of flooding from surface water (0_2m depth) | https://www.data.gov.uk/dataset/e70328b3-1a75-458e-8402-9ab3ce15aae1/real-time-rainfall-data |
 | Risk of flooding from surface water_climate change (0_2m depth) | https://www.data.gov.uk/dataset/e70328b3-1a75-458e-8402-9ab3ce15aae1/real-time-rainfall-data |
-| Landuse | |https://data.geods.ac.uk/dataset/small-area-uk-vegetation-indices |
+| Landuse | https://data.geods.ac.uk/dataset/small-area-uk-vegetation-indices |
 | DTM |  https://www.ukso.org/static-maps/ordnance-survey-terrain-50.html], |
 | Soil Permeability/soil type | https://www.bgs.ac.uk/download/hydrogeology-625k-dataset |
 | Geology | https://www.bgs.ac.uk/download/hydrogeology-625k-dataset |
